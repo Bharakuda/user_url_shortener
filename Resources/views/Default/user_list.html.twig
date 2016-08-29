@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <h2>User list</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Created</th>
+                <th>Modified</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.firstname }}</td>
+                    <td>{{ user.lastname }}</td>
+                    <td>{% if user.created %}{{ user.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td>{% if user.modified %}{{ user.modified|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td>
+                        <a class="btn btn-default" role="button" href="{{ path('user_delete', { 'id': user.id }) }}">Delete</a>
+                        <a class="btn btn-default" role="button" href="{{ path('user_edit', { 'id': user.id }) }}">Edit</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center whiteBackground">
+                <h1 class="text-center">Admin panel</h1>
+                <br>
+                <a class="btn btn-default" role="button" href="{{ path('user_new') }}">Create a new User</a>
+            </div>
+        </div>
+        <br>
+        {{ include('@User/Default/user_list.html.twig') }}
+    </div>
+{% endblock %}

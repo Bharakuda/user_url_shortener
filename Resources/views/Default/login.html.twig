@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <h2 class="text-center">Member Login</h2>
+        <div class="col-md-2 col-md-offset-5 text-center whiteBackground">
+                <form action="{{ path('login_form') }}" method="post" class="form-horizontal">
+                    <div class="form-group text-center">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}"/>
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" name="_password"/>
+                        <a href="{{ path('forgotpassword') }}">Forgot your password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

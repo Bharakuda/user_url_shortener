@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">User account page</h2>
+            <div class="col-md-8 col-md-offset-2 text-center whiteBackground">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Created</th>
+                        <th>Modified</th>
+                        <th>Edit</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {#{% if app.user %}#}
+                        <tr>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.firstname }}</td>
+                            <td>{{ user.lastname }}</td>
+                            <td>{% if user.created %}{{ user.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            <td>{% if user.modified %}{{ user.modified|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            <td><a class="btn btn-default" role="button" href="{{ path('user_edit', { 'id': user.id }) }}">Edit</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <a class="btn btn-default" role="button" href="{{ path('user_delete', { 'id': user.id }) }}">Deactivate account</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
