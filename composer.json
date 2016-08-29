@@ -1,0 +1,27 @@
+{
+  "name": "alisakopric/user_url_shortener",
+  "version": "1.0.0",
+  "type": "library",
+  "description": "Just a test module for UserBundle.",
+  "keywords": [
+    "url",
+    "shortener"
+  ],
+  "homepage": "https://github.com/Bharakuda/user_url_shortener.git",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alisa Koprić",
+      "email": "alisa.kopric@gmail.com",
+      "homepage": "https://github.com/Bharakuda",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-0": {
+      "UserBundle\\": ""
+    }
+  }
+}
