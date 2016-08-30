@@ -8,4 +8,9 @@ class Install
     {
       exit('f* yea!');
     }
+    
+    public function mock2()
+    {
+      exit('f*2 yea!');
+    }    
 }
