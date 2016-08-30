@@ -24,5 +24,10 @@
       "UserBundle\\": ""
     }
   },
-  "target-dir": "UserBundle"  
+  "target-dir": "UserBundle",
+  "scripts": {
+      "post-install-cmd": [
+          "UserBundle\\UserBundle\\Scripts\\Install::mock"
+      ]
+  }  
 }
