@@ -28,6 +28,9 @@
   "scripts": {
       "post-install-cmd": [
           "UserBundle\\Scripts\\Install::mock"
-      ]
+      ],
+      "post-update-cmd": [
+          "UserBundle\\Scripts\\Install::mock2"
+      ]      
   }  
 }
