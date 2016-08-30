@@ -27,7 +27,7 @@
   "target-dir": "UserBundle",
   "scripts": {
       "post-install-cmd": [
-          "UserBundle\\UserBundle\\Scripts\\Install::mock"
+          "UserBundle\\Scripts\\Install::mock"
       ]
   }  
 }
