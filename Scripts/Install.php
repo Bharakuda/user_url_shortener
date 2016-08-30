@@ -4,12 +4,12 @@ namespace UserBundle\Scripts;
 
 class Install
 {
-    public function mock()
+    public static function mock()
     {
       exit('f* yea!');
     }
     
-    public function mock2()
+    public static function mock2()
     {
       exit('f*2 yea!');
     }    
